@@ -1,4 +1,5 @@
-import {Entity, model, property} from '@loopback/repository';
+import {belongsTo, Entity, model, property} from '@loopback/repository';
+import {Ubigeo} from './ubigeo.model';
 
 @model()
 export class Candidato extends Entity {
@@ -39,10 +40,11 @@ export class Candidato extends Entity {
   })
   fecha_nac: string;
 
-  @property({
-    type: 'string',
-    required: true,
-  })
+  // @property({
+  //   type: 'string',
+  //   required: true,
+  // })
+  @belongsTo(() => Ubigeo)
   cod_ubigeo: string;
 
   @property({

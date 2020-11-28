@@ -1,4 +1,6 @@
-import {Entity, model, property} from '@loopback/repository';
+import {belongsTo, Entity, model, property} from '@loopback/repository';
+import {Candidato} from './candidato.model';
+import {Ubigeo} from './ubigeo.model';
 
 @model()
 export class Domicilio extends Entity {
@@ -9,10 +11,11 @@ export class Domicilio extends Entity {
   })
   cod_domicilio?: number;
 
-  @property({
-    type: 'string',
-    required: true,
-  })
+  // @property({
+  //   type: 'string',
+  //   required: true,
+  // })
+  @belongsTo(() => Ubigeo)
   cod_ubigeo: string;
 
   @property({
@@ -21,10 +24,11 @@ export class Domicilio extends Entity {
   })
   direccion: string;
 
-  @property({
-    type: 'number',
-    required: true,
-  })
+  // @property({
+  //   type: 'number',
+  //   required: true,
+  // })
+  @belongsTo(() => Candidato)
   cod_candidato: number;
 
 

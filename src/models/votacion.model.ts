@@ -1,4 +1,5 @@
-import {Entity, model, property} from '@loopback/repository';
+import {belongsTo, Entity, model, property} from '@loopback/repository';
+import {Candidato} from './candidato.model';
 
 @model()
 export class Votacion extends Entity {
@@ -9,9 +10,10 @@ export class Votacion extends Entity {
   })
   cod_votacion?: number;
 
-  @property({
-    type: 'number',
-  })
+  // @property({
+  //   type: 'number',
+  // })
+  @belongsTo(() => Candidato)
   cod_candidato?: number;
 
   @property({

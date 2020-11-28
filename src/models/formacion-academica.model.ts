@@ -1,4 +1,5 @@
-import {Entity, model, property} from '@loopback/repository';
+import {belongsTo, Entity, model, property} from '@loopback/repository';
+import {Candidato} from './candidato.model';
 
 @model()
 export class FormacionAcademica extends Entity {
@@ -55,10 +56,11 @@ export class FormacionAcademica extends Entity {
   })
   carrera?: string;
 
-  @property({
-    type: 'number',
-    required: true,
-  })
+  // @property({
+  //   type: 'number',
+  //   required: true,
+  // })
+  @belongsTo(() => Candidato)
   cod_candidato: number;
 
   @property({

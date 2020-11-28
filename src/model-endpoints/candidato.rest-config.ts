@@ -5,6 +5,6 @@ const config: ModelCrudRestApiConfig = {
   model: Candidato,
   pattern: 'CrudRest',
   dataSource: 'db',
-  basePath: '/candidatoes',
+  basePath: '/candidatos',
 };
 module.exports = config;

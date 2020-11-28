@@ -1,4 +1,6 @@
-import {Entity, model, property} from '@loopback/repository';
+import {belongsTo, Entity, model, property} from '@loopback/repository';
+import {Candidato} from './candidato.model';
+import {PartidoPolitico} from './partido-politico.model';
 
 @model()
 export class CargoPartidoPolitico extends Entity {
@@ -15,10 +17,11 @@ export class CargoPartidoPolitico extends Entity {
   })
   nombre: string;
 
-  @property({
-    type: 'number',
-    required: true,
-  })
+  // @property({
+  //   type: 'number',
+  //   required: true,
+  // })
+  @belongsTo(() => PartidoPolitico)
   cod_partido: number;
 
   @property({
@@ -45,10 +48,11 @@ export class CargoPartidoPolitico extends Entity {
   })
   vigencia: string;
 
-  @property({
-    type: 'number',
-    required: true,
-  })
+  // @property({
+  //   type: 'number',
+  //   required: true,
+  // })
+  @belongsTo(() => Candidato)
   cod_candidato: number;
 
 
