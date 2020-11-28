@@ -6,3 +6,4 @@ export * from './formacion-academica.model';
 export * from './partido-politico.model';
 export * from './votacion.model';
 
+export * from './ubigeo.model';
