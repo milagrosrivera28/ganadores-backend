@@ -12,37 +12,37 @@ export class FormacionAcademica extends Entity {
 
   @property({
     type: 'string',
-    required: true,
+    // required: true,
   })
   institucion_edu: string;
 
   @property({
     type: 'string',
-    required: true,
+    // required: true,
   })
   estado: string;
 
   @property({
     type: 'string',
-    required: true,
+    // required: true,
   })
   periodo: string;
 
   @property({
     type: 'string',
-    required: true,
+    // required: true,
   })
   grado_academico: string;
 
   @property({
     type: 'string',
-    required: true,
+    // required: true,
   })
   tipo: string;
 
   @property({
     type: 'string',
-    required: true,
+    // required: true,
   })
   lugar: string;
 
@@ -65,6 +65,7 @@ export class FormacionAcademica extends Entity {
 
   @property({
     type: 'boolean',
+    default: '0'
   })
   valido?: boolean;
 

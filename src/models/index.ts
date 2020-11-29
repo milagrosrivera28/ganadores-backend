@@ -7,3 +7,4 @@ export * from './partido-politico.model';
 export * from './votacion.model';
 
 export * from './ubigeo.model';
+export * from './postulacion.model';

@@ -12,31 +12,31 @@ export class Candidato extends Entity {
 
   @property({
     type: 'string',
-    required: true,
+    // required: true,
   })
   nombres: string;
 
   @property({
     type: 'string',
-    required: true,
+    // required: true,
   })
   apellido_paterno: string;
 
   @property({
     type: 'string',
-    required: true,
+    // required: true,
   })
   apellido_materno: string;
 
   @property({
     type: 'number',
-    required: true,
+    // required: true,
   })
   dni: number;
 
   @property({
-    type: 'date',
-    required: true,
+    type: 'string',
+    // required: true,
   })
   fecha_nac: string;
 
@@ -49,15 +49,21 @@ export class Candidato extends Entity {
 
   @property({
     type: 'any',
-    required: true,
+    // required: true,
   })
   facebook: any;
 
   @property({
     type: 'any',
-    required: true,
+    // required: true,
   })
   twitter: any;
+
+  @property({
+    type: 'any',
+    // required: true,
+  })
+  url_foto: any;
 
 
   constructor(data?: Partial<Candidato>) {
